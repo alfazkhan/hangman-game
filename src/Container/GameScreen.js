@@ -58,7 +58,7 @@ class GameScreen extends Component {
         }
 
         if (!correctWord) {
-            // chancesRemaining -= 1
+            chancesRemaining -= 1
         }
 
         this.setState({
@@ -94,7 +94,7 @@ class GameScreen extends Component {
                         :
                         <div>
                             <h1>Hangman {this.state.word}</h1>
-                            <WordBlanks word={this.state.word} string={this.state.hiddenString} />
+                            <WordBlanks word={this.state.word} />
                             <Keyboard charSelect={this.checkStatus} />
                             <h4>Chances Remaining: {this.state.chancesRemaining}</h4>
                         </div>
